@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <title>Booksphere Membership Sign Up</title>
+
+    <header>
+    <h1>BookSphere</h1>
+    <hr width="35%" align="left">
+    <p><em>Digital library with AI recommendations</em></p>
+    </header>
+</head>
+
+<body>
+
+<form action="process.php" method="POST">
+<fieldset id="border" name="border" border-color="darkslategrey">
+<label for="border"><b>Book Sphere Membership - Sign up Form</b></label>
+
+<table cellpadding="4">
+
+    <tr>
+    <td>First Name:</td>
+    <td><input type="text" name="fname" required></td>
+    </tr>
+
+    <tr>
+    <td>Last Name:</td>
+    <td><input type="text" name="lname" required></td>
+    </tr>
+
+    <tr>
+    <td>E-mail Address:</td>
+    <td><input type="email" name="email" placeholder="name@domain.com" required></td>
+    </tr>
+
+    <tr>
+    <td>Create Password:</td>
+    <td><input type="password" name="password" required></td>
+    </tr>
+
+    <tr>
+    <td>Preferred eReader Device:</td>
+    <td>
+    <select name="device_type">
+        <option value="kindle">Amazon Kindle</option>
+        <option value="tablet">iPad / Android Tablet</option>
+        <option value="mobile">Mobile App</option>
+        <option value="browser">Web Browser Only</option>
+    </select>
+    </td>
+    </tr>
+
+    <tr>
+    <td>Primary Digital Format:</td>
+    <td>
+        <input type="radio" name="format" value="pdf"> PDF
+        <input type="radio" name="format" value="audiobook"> Audiobook
+    </td>
+    </tr>
+
+    <tr>
+    <td>Favorite Genres:</td>
+    <td>
+        <input type="checkbox" name="genres" value="fiction"> Fiction
+        <input type="checkbox" name="genres" value="non-fiction"> Non-Fiction<br>
+        <input type="checkbox" name="genres" value="sci-fi"> Sci-Fi / Fantasy
+        <input type="checkbox" name="genres" value="tech"> Tech & Academic
+    </td>
+    </tr>
+
+    <tr>
+    <td>Membership Tier:</td>
+    <td>
+    <select name="membership_plan" required>
+        <option value="free">Standard</option>
+        <option value="premium">Premium</option>
+    </select>
+    </td>
+    </tr>
+
+    <tr>
+    <td>Reading Goals:</td>
+    <td><textarea name="reading_pref" rows="4" cols="30" placeholder="Set a yearly reading goal or list your favorite authors..."></textarea></td>
+    </tr>
+
+    <tr>
+    <td colspan="2">
+    <input type="submit" value="Create Digital Account">
+    <input type="reset" value="Clear Form">
+    </td>
+    </tr>
+
+    <tr>
+    <td colspan="2">
+    <a href="../Practicum_2/Practicum_2.html">Return to Shelf </a> |
+    <a href="/Practicum_3/Practicum_3_login_in.html"> Login to your Account</a>
+    </td>
+    </tr>
+
+</table>
+</fieldset>
+</form>
+</body>
+
+<footer>
+<hr>
+<p>BookSphere | The Digital library, curated by AI |<i> Author: Jerin Jacob J</i></p>
+</footer>
+
+</html>

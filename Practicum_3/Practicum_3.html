@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <title>Booksphere Book Review Submission</title>
+
+    <header>
+    <h1>BookSphere</h1>
+    <hr width="35%" align="left">
+    <p><em>Digital library with AI recommendations</em></p>
+    </header>
+</head>
+
+<body>
+
+<form action="process.php" method="POST">
+<fieldset id="border" name="border" border-color="darkslategrey">
+<label for="border"><b>Book Sphere - Submit a Book Review</b></label>
+
+<table cellpadding="4">
+
+    <tr>
+    <td>Book Title:</td>
+    <td><input type="text" name="book_title" placeholder="e.g. Angels & Demons" required></td>
+    </tr>
+
+    <tr>
+    <td>Author:</td>
+    <td><input type="text" name="author" placeholder="e.g. Jerin Jacob J" required></td>
+    </tr>
+
+    <tr>
+    <td>Your Name:</td>
+    <td><input type="text" name="reviewer_name" required></td>
+    </tr>
+
+    <tr>
+    <td>E-mail Address:</td>
+    <td><input type="email" name="email" placeholder="name@domain.com" required></td>
+    </tr>
+
+    <tr>
+    <td>Star Rating:</td>
+    <td>
+        <input type="radio" name="rating" value="1"> 1
+        <input type="radio" name="rating" value="2"> 2
+        <input type="radio" name="rating" value="3"> 3
+        <input type="radio" name="rating" value="4"> 4
+        <input type="radio" name="rating" value="5"> 5
+    </td>
+    </tr>
+
+    <tr>
+    <td>Genre Tags:</td>
+    <td>
+        <input type="checkbox" name="genres" value="fiction"> Fiction
+        <input type="checkbox" name="genres" value="non-fiction"> Non-Fiction<br>
+        <input type="checkbox" name="genres" value="sci-fi"> Sci-Fi / Fantasy
+        <input type="checkbox" name="genres" value="tech"> Tech & Academic
+    </td>
+    </tr>
+
+    <tr>
+    <td>Would You Recommend?</td>
+    <td>
+        <input type="radio" name="recommend" value="yes"> Yes
+        <input type="radio" name="recommend" value="no"> No
+    </td>
+    </tr>
+
+    <tr>
+    <td>Your Review:</td>
+    <td><textarea name="review_text" rows="5" cols="30" placeholder="Share your thoughts on the book..." required></textarea></td>
+    </tr>
+
+    <tr>
+    <td colspan="2">
+    <input type="submit" value="Submit Review">
+    <input type="reset" value="Clear Form">
+    </td>
+    </tr>
+
+    <tr>
+    <td colspan="2">
+    <a href="../Practicum_2/Practicum_2.html">Return to Shelf </a> |
+    <a href="/Practicum_3/Practicum_3_login_in.html"> Login to your Account</a>
+    </td>
+    </tr>
+
+</table>
+</fieldset>
+</form>
+</body>
+
+<footer>
+<hr>
+<p>BookSphere | The Digital library, curated by AI |<i> Author: Jerin Jacob J</i></p>
+</footer>
+
+</html>
