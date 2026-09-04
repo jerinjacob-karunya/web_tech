@@ -1,0 +1,42 @@
+body {
+    background-color: bisque;
+    color: #2b2118;
+    font-family: georgia;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    border: 1px solid #ddc4a5;
+}
+
+.button {
+    background-color: bisque;
+    font-family: calibri;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #ddc4a5;
+    padding: 8px 16px;
+    text-align: center;
+}
+
+.card {
+    background-color: #f7e8d3;
+    border: 1px solid #ddc4a5;
+    padding: 1.5em;
+    width: 320px;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+    color: #2b2118;
+    position: relative;
+  }
+
+.maintxt {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.subtxt {
+    font-size: 18px;
+    color: #897864;
+}

@@ -3,24 +3,145 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
         <title>BookSphere - Home</title>
+        <style>
+            .td{
+                padding: 3em 9em;
+            }
+
+            .tsec{
+                width: 100%;
+                padding-right: 7em;
+                padding-left: 7em;
+            }
+
+            .subsec 
+            {
+                font-size: 22px;
+                font-weight: bold;
+                color: #2b2118;
+                margin-top: 0;
+            }
+
+
+            .col {
+                display: inline-block;
+                width: 33%;
+                box-sizing: border-box;
+                padding-left: 2.5em;
+            }
+
+            .col + .col {
+                border-left: 3px solid #ddc4a5;
+            }
+
+            footer {
+                background: #2b2118;
+                box-sizing: border-box;
+                width: 100%;
+
+            }
+            
+            footer div {
+                color: whitesmoke;
+                display: inline-block;
+                width: 19%;
+                text-align: center;
+                box-sizing: border-box;
+                vertical-align: middle;
+            }
+
+        </style>
     </head>
 
     <body>
-        <table border="1" width="100%">
+        <table style="width: 100%; padding-right: 7em; padding-left: 7em">
             <tr>
                 <td>
-                <h3>BookSphere</h3>
+                <h3>Book<span style="color: brown;">Sphere</span></h3>
                 </td>
 
-                <td align="center" width="100em">
+                <td align="center" style="padding: 0; width: 7em;">
                 <form action="../Practicum_3/login_in.html" method="get">
-                    <input type="submit" value="Sign in">
+                    <input type="submit" value="Sign in" class="button" >
                 </form>
                 </td>
             </tr>
         </table>
         <hr>
-       
+
+        <table class="tsec">
+            <tr>
+                <td style="width: 60%" class="td"> 
+                    <p class="maintxt">Find the book <br> you didn't <br> know you were <br> looking for.</p>
+                    <p class="subtxt">BookSphere reads what you read, then quietly puts<br> the right next book on your shelf.</p>
+                  
+                    <form action="../Practicum_2/index.html" method="get" style="display: inline-block; margin-right: 1em;">
+                        <input type="submit" value="Start Reading free" class="button" style="background-color: maroon; color:white">
+                    </form>
+
+                    <form action="#mechanism" method="get" style="display: inline-block; margin-right: 1em;">
+                        <input type="submit" value="See How it Works" class="button">
+                    </form>
+                
+                </td>
+
+                <td>
+                    <div class="card" style="width: 89%; height: 100%;">
+                        <p style="color: #202a44;;">Recommended for you</p>
+                        <p style="font-size:20px"><br>The War of the Worlds</p>
+                        <p class="subtxt">H.G. Wells</p>
+                        <hr style="border: 1px dashed #ddc4a5;">
+                        <p class="subtxt">"Sharing the same groundbreaking style of visionary sci-fi and thought-provoking encounters with the unknown."</p>
+                        <p class="subtxt" style="font-size: 14px;">eBook &emsp; Audiobook &emsp; ~11h read</p>
+
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <hr>
+
+        <div style="width: 100%; padding-right: 7em; padding-left: 7em; box-sizing: border-box; margin-top: 3em; margin-bottom: 5em;">
+            <div>
+                <p id="mechanism" class="maintxt" style="font-size: 2.5em; margin-bottom: 0.2em;">How BookSphere learns <br>your taste</p>
+                <p class="subtxt">No quizzes, no surveys – just your reading habits.</p>
+            </div>
+
+            <div >
+                <div class="col" style="padding-left: 0;">
+                    <p class="subsec">Tell us what you've read</p>
+                    <p class="subtxt">Add a few book titles or import your reading <br> history from another app to give it a head start.</p>
+                </div>
+
+                <div class="col">
+                    <p class="subsec">It studies your patterns</p>
+                    <p class="subtxt">Pacing, themes, the endings you loved and<br> the ones you abandoned - All of it counts.</p>
+                </div>
+
+                <div class="col">
+                    <p class="subsec">New picks emerge as you go</p>
+                    <p class="subtxt">Recommendations shape themselves as you<br> finish a chapter, not just at the end.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+        <div>
+            <p>BookSphere</p>
+        </div>
+
+        <div>|</div>
+
+        <div>
+            <p>The Digital library, curated by AI</p>
+        </div>
+
+        <div>|</div>
+
+        <div>
+            <p><i> Author: Jerin Jacob J</i></p>
+        </div>
+        </footer>
     </body>
 </html>
