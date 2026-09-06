@@ -6,14 +6,17 @@
         <link rel="stylesheet" href="style.css">
         <title>BookSphere - Home</title>
         <style>
-            .td{
-                padding: 3em 9em;
-            }
-
-            .tsec{
+            .mainsec{
                 width: 100%;
                 padding-right: 7em;
                 padding-left: 7em;
+            }
+
+            .maind{
+                display: inline-block;
+                width: 40%;
+                vertical-align: middle;
+                box-sizing: border-box;
             }
 
             .subsec 
@@ -44,7 +47,7 @@
             }
             
             footer div {
-                color: whitesmoke;
+                color: #f7e8d3;
                 display: inline-block;
                 width: 19%;
                 text-align: center;
@@ -56,55 +59,49 @@
     </head>
 
     <body>
-        <table style="width: 100%; padding-right: 7em; padding-left: 7em">
-            <tr>
-                <td>
+        <div class="mainsec">
+            <div class="maind">
                 <h3>Book<span style="color: brown;">Sphere</span></h3>
-                </td>
-
-                <td align="center" style="padding: 0; width: 7em;">
-                <form action="../practicum_3/login_in.html" method="get">
-                    <input type="submit" value="Sign in" class="button" >
+            </div>
+            
+            <div class="maind" style="width: 48%; text-align: right;">
+                <form action="#profile" method="get">
+                    <input type="submit" value="Profile" class="button">
                 </form>
-                </td>
-            </tr>
-        </table>
+            </div>
+        </div>
         <hr>
 
-        <table class="tsec">
-            <tr>
-                <td style="width: 60%" class="td"> 
-                    <p class="maintxt">Find the book <br> you didn't <br> know you were <br> looking for.</p>
-                    <p class="subtxt">BookSphere reads what you read, then quietly puts<br> the right next book on your shelf.</p>
-                  
-                    <form action="../practicum_2/index.html" method="get" style="display: inline-block; margin-right: 1em;">
-                        <input type="submit" value="Start Reading free" class="button" style="background-color: maroon; color:white">
-                    </form>
+        <div class="mainsec">
+            <div class="maind" style="padding: 3em 9em;">
+                <p class="maintxt">Find the book  you didn't know you were looking for.</p>
+                <p class="subtxt">BookSphere reads what you read, then quietly puts the right next book on your shelf.</p>
+            
+                <form action="../practicum_2/index.html" method="get" style="display: inline-block; margin-right: 1em;">
+                    <input type="submit" value="Start Reading free" class="button" style="background-color: maroon; color:white">
+                </form>
 
-                    <form action="#mechanism" method="get" style="display: inline-block; margin-right: 1em;">
-                        <input type="submit" value="See How it Works" class="button">
-                    </form>
-                
-                </td>
+                <form action="#mechanism" method="get" style="display: inline-block; margin-right: 1em;">
+                    <input type="submit" value="See How it Works" class="button">
+                </form>
+            </div>
 
-                <td>
-                    <div class="card" style="width: 89%; height: 100%;">
-                        <p style="color: #202a44;">Recommended for you</p>
-                        <p style="font-size:20px"><br>The War of the Worlds</p>
-                        <p class="subtxt">H.G. Wells</p>
-                        <hr style="border: 1px dashed #ddc4a5;">
-                        <p class="subtxt">"Sharing the same groundbreaking style of visionary sci-fi and thought-provoking encounters with the unknown."</p>
-                        <p class="subtxt" style="font-size: 14px;">eBook &emsp; Audiobook &emsp; ~11h read</p>
-
-                    </div>
-                </td>
-            </tr>
-        </table>
+            <div class="maind" style="padding: 3em;">
+                <div class="card" style="width: 89%; height: 100%;">
+                    <p style="color: #202a44;">Recommended for you</p>
+                    <p style="font-size:20px"><br>The War of the Worlds</p>
+                    <p class="subtxt">H.G. Wells</p>
+                    <hr style="border: 1px dashed #ddc4a5;">
+                    <p class="subtxt">"Sharing the same groundbreaking style of visionary sci-fi and thought-provoking encounters with the unknown."</p>
+                    <p class="subtxt" style="font-size: 14px;">eBook &emsp; Audiobook &emsp; ~11h read</p>
+                </div>
+            </div>
+        </div>
         <hr>
 
-        <div style="width: 100%; padding-right: 7em; padding-left: 7em; box-sizing: border-box; margin-top: 3em; margin-bottom: 5em;">
+        <div class="mainsec" style="padding: 3em 9em;">
             <div>
-                <p id="mechanism" class="maintxt" style="font-size: 2.5em; margin-bottom: 0.2em;">How BookSphere learns <br>your taste</p>
+                <p id="mechanism" class="maintxt" style="font-size: 2.5em; margin-bottom: 0.2em;">How BookSphere learns your taste</p>
                 <p class="subtxt">No quizzes, no surveys – just your reading habits.</p>
             </div>
 
