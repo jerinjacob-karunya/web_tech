@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Micro-Expense Visualizer — See where the small stuff goes</title>
+<meta name="description" content="Track the coffees, subscriptions, and daily charges that don't feel like much — and see what they really cost over a year, and over ten." />
+<meta property="og:title" content="Micro-Expense Visualizer" />
+<meta property="og:description" content="Small charges. Big totals. Track your micro-expenses and see their true long-term cost." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,450;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="landing">
+
+<header class="site-header">
+  <div class="header-inner container">
+    <a class="brand" href="index.html">
+      <span class="brand-name">Micro-Expense Visualizer</span>
+    </a>
+    <nav class="nav-tabs" aria-label="Main navigation">
+      <a href="index.html" data-nav="landing">Home</a>
+      <a href="dashboard.html" data-nav="dashboard">Dashboard</a>
+      <a href="add-expense.html" data-nav="add-expense">Add expense</a>
+      <a href="analytics.html" data-nav="analytics">Analytics</a>
+      <a href="profile.html" data-nav="profile">Profile</a>
+    </nav>
+    <div class="header-account" id="headerAccount"></div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Micro-Expense Visualizer</span>
+        <h1>The coffee adds up.<br />So does everything else.</h1>
+        <p>
+          A $6 coffee doesn't feel like a decision. Neither does the streaming
+          plan you forgot about, or the $12 rideshare home. Micro-Expense
+          Visualizer logs the small, recurring charges most budgeting tools
+          ignore, then shows you the number they quietly add up to — this
+          month, this year, and ten years from now if that money had been
+          invested instead.
+        </p>
+        <div class="hero-figures">
+          <div class="hero-figure">
+            <span class="num">$5.75</span>
+            <span class="cap">a daily coffee</span>
+          </div>
+          <div class="hero-figure">
+            <span class="num">$2,098</span>
+            <span class="cap">a year, unnoticed</span>
+          </div>
+          <div class="hero-figure">
+            <span class="num">$30,900</span>
+            <span class="cap">over 10 years, invested at 7%</span>
+          </div>
+        </div>
+        <p class="muted" style="margin-top: var(--sp-5); font-size: 0.8rem;">
+          Create a free account below — everything is stored locally in your
+          browser, nothing leaves your device.
+        </p>
+      </div>
+
+      <div class="auth-panel panel" id="authPanel">
+        <div class="form-msg" id="landingMsg"></div>
+        <div class="auth-tabs" role="tablist" aria-label="Authentication">
+          <button type="button" class="auth-tab-btn active" data-target="signupForm" role="tab" aria-selected="true">Sign up</button>
+          <button type="button" class="auth-tab-btn" data-target="loginForm" role="tab" aria-selected="false">Log in</button>
+        </div>
+
+        <form id="signupForm" class="auth-form active" novalidate>
+          <div class="form-msg" id="signupMsg"></div>
+          <div class="field">
+            <label for="suName">Full name</label>
+            <input type="text" id="suName" name="name" autocomplete="name" required />
+            <div class="error-msg"></div>
+          </div>
+          <div class="field">
+            <label for="suEmail">Email address</label>
+            <input type="email" id="suEmail" name="email" autocomplete="email" required />
+            <div class="error-msg"></div>
+          </div>
+          <div class="field">
+            <label for="suPassword">Password</label>
+            <input type="password" id="suPassword" name="password" autocomplete="new-password" minlength="6" required />
+            <div class="error-msg"></div>
+          </div>
+          <div class="field">
+            <label for="suConfirm">Confirm password</label>
+            <input type="password" id="suConfirm" name="confirm" autocomplete="new-password" minlength="6" required />
+            <div class="error-msg"></div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Create account</button>
+        </form>
+
+        <form id="loginForm" class="auth-form" novalidate>
+          <div class="form-msg" id="loginMsg"></div>
+          <div class="field">
+            <label for="liEmail">Email address</label>
+            <input type="email" id="liEmail" name="email" autocomplete="email" required />
+            <div class="error-msg"></div>
+          </div>
+          <div class="field">
+            <label for="liPassword">Password</label>
+            <input type="password" id="liPassword" name="password" autocomplete="current-password" required />
+            <div class="error-msg"></div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Log in</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="mt-6" style="margin-bottom: var(--sp-7);">
+      <div class="metric-grid">
+        <div class="panel">
+          <h3>1. Log the small stuff</h3>
+          <p class="muted">Add the subscriptions, coffees, and lifestyle charges you'd normally never track, in seconds.</p>
+        </div>
+        <div class="panel">
+          <h3>2. See the real total</h3>
+          <p class="muted">Every entry converts to a monthly figure, so a $12 rideshare and a $99 yearly plan land on the same scale.</p>
+        </div>
+        <div class="panel">
+          <h3>3. Compare against your budget</h3>
+          <p class="muted">Set a monthly threshold on your profile and watch a live indicator tell you when spending creeps too high.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    Micro-Expense Visualizer &mdash; a local, browser-only budgeting tool. Your data stays in this browser's storage.
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

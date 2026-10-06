@@ -1,0 +1,28 @@
+[
+  { "category": "Subscriptions", "name": "Netflix", "cost": 15.49, "frequency": "monthly" },
+  { "category": "Subscriptions", "name": "Spotify Premium", "cost": 11.99, "frequency": "monthly" },
+  { "category": "Subscriptions", "name": "Amazon Prime", "cost": 14.99, "frequency": "monthly" },
+  { "category": "Subscriptions", "name": "iCloud+ Storage", "cost": 2.99, "frequency": "monthly" },
+  { "category": "Subscriptions", "name": "YouTube Premium", "cost": 13.99, "frequency": "monthly" },
+
+  { "category": "Food & Drink", "name": "Morning Specialty Coffee", "cost": 5.75, "frequency": "daily" },
+  { "category": "Food & Drink", "name": "Lunch Delivery Order", "cost": 16.5, "frequency": "daily" },
+  { "category": "Food & Drink", "name": "Bottled Water / Vending", "cost": 2.25, "frequency": "daily" },
+  { "category": "Food & Drink", "name": "Weekly Grocery Snacks", "cost": 18.0, "frequency": "monthly" },
+
+  { "category": "Housing", "name": "Storage Unit Rental", "cost": 89.0, "frequency": "monthly" },
+  { "category": "Housing", "name": "Renters Insurance", "cost": 17.0, "frequency": "monthly" },
+  { "category": "Housing", "name": "Home Cleaning Service", "cost": 120.0, "frequency": "monthly" },
+
+  { "category": "Entertainment", "name": "Movie Theater Pass", "cost": 24.99, "frequency": "monthly" },
+  { "category": "Entertainment", "name": "Video Game Subscription", "cost": 16.99, "frequency": "monthly" },
+  { "category": "Entertainment", "name": "Concert / Ticket Fund", "cost": 40.0, "frequency": "monthly" },
+
+  { "category": "Software", "name": "Cloud Backup Plan", "cost": 9.99, "frequency": "monthly" },
+  { "category": "Software", "name": "Productivity App Suite", "cost": 12.99, "frequency": "monthly" },
+  { "category": "Software", "name": "VPN Service", "cost": 6.5, "frequency": "monthly" },
+
+  { "category": "Lifestyle", "name": "Gym Membership", "cost": 45.0, "frequency": "monthly" },
+  { "category": "Lifestyle", "name": "Meal Kit Delivery", "cost": 65.0, "frequency": "monthly" },
+  { "category": "Lifestyle", "name": "Rideshare Commute", "cost": 12.0, "frequency": "daily" }
+]
