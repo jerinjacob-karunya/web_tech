@@ -1,0 +1,285 @@
+body {
+  background-color: bisque;
+  color: #2b2118;
+  font-family: georgia;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  border: 1px solid #ddc4a5;
+  margin: 0;
+}
+
+.mainsec {
+  padding: 2em 6%;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: bisque;
+  border-bottom: 1px solid #ddc4a5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 6%;
+}
+
+.brand {
+  color: brown;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  display: block;
+  color: #2b2118;
+  font-family: calibri;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 14px;
+  border: 1px solid bisque;
+}
+
+.menu a:hover {
+  border: 1px solid #ddc4a5;
+}
+
+.menu a.active {
+  background-color: maroon;
+  color: white;
+}
+
+.button {
+  display: inline-block;
+  background-color: bisque;
+  color: #2b2118;
+  font-family: calibri;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #ddc4a5;
+  padding: 8px 16px;
+  margin: 0.5em 1em 0 0;
+}
+
+.main-button {
+  background-color: maroon;
+  color: white;
+}
+
+.card {
+  background-color: #f7e8d3;
+  border: 1px solid #ddc4a5;
+  padding: 1.5em;
+  box-sizing: border-box;
+}
+
+.maintxt {
+  font-size: 46px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.heading {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin: 0 0 0.2em 0;
+}
+
+.subtxt {
+  font-size: 18px;
+  color: #897864;
+  margin: 0.4em 0;
+}
+
+.small {
+  font-size: 14px;
+}
+
+.subsec {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.dashed {
+  border: 1px dashed #ddc4a5;
+  margin: 1em 0;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.stack {
+  position: relative;
+  width: 330px;
+  height: 300px;
+}
+
+.cover {
+  position: absolute;
+  width: 150px;
+  height: 210px;
+  box-sizing: border-box;
+  padding: 1em;
+  color: white;
+  font-size: 18px;
+  border: 1px solid #2b2118;
+}
+
+.cover p {
+  margin: 0;
+}
+
+.c1 {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: maroon;
+}
+
+.c2 {
+  top: 35px;
+  left: 90px;
+  z-index: 2;
+  background-color: #2b2118;
+}
+
+.c3 {
+  top: 70px;
+  left: 180px;
+  z-index: 3;
+  background-color: brown;
+}
+
+.cover:hover {
+  z-index: 4;
+}
+
+.featured {
+  position: relative;
+  margin-top: 1.5em;
+}
+
+.ribbon {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background-color: maroon;
+  color: white;
+  font-family: calibri;
+  font-weight: bold;
+  padding: 6px 14px;
+}
+
+.trending {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  margin-top: 1.5em;
+}
+
+.trend-card {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+  padding-top: 2.8em;
+}
+
+.rank {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: maroon;
+  color: white;
+  font-family: calibri;
+  font-weight: bold;
+  padding: 4px 12px;
+}
+
+.lifted {
+  top: -14px;
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2em;
+  margin-top: 1.5em;
+}
+
+.genres {
+  position: sticky;
+  top: 90px;
+  width: 220px;
+  background-color: #f7e8d3;
+  border: 1px solid #ddc4a5;
+  padding: 1.5em;
+  box-sizing: border-box;
+}
+
+.genres ul {
+  margin: 0;
+  padding-left: 1.2em;
+  line-height: 2;
+}
+
+.lists {
+  flex: 1;
+  min-width: 280px;
+}
+
+.lists .card {
+  margin-bottom: 1.2em;
+  padding: 2.5em 1.5em;
+}
+
+.top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 20;
+  background-color: maroon;
+  color: white;
+  font-family: calibri;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 18px;
+  border: 1px solid #2b2118;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #2b2118;
+  color: #f7e8d3;
+  text-align: center;
+}
+
+footer div {
+  padding: 0 1.5em;
+}
