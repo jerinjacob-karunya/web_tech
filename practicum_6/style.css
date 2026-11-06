@@ -283,3 +283,68 @@ footer {
 footer div {
   padding: 0 1.5em;
 }
+
+.quadrants {
+  position: relative;
+  height: 380px;
+  margin-top: 1.5em;
+  border: 1px solid #ddc4a5;
+}
+
+.quad {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  box-sizing: border-box;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.q1 { top: 0;    left: 0;  background-color: #f7e8d3; }
+.q2 { top: 0;    right: 0; background-color: #efd9bb; }
+.q3 { bottom: 0; left: 0;  background-color: #efd9bb; }
+.q4 { bottom: 0; right: 0; background-color: #f7e8d3; }
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 240px;
+  box-sizing: border-box;
+  padding: 1.2em;
+  background-color: maroon;
+  color: white;
+  border: 1px solid #2b2118;
+  text-align: center;
+}
+
+.centered .subtxt {
+  color: #f7e8d3;
+}
+
+@media (max-width: 600px) {
+  .quadrants {
+    height: auto;
+    border: none;
+  }
+
+  .quad {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .centered {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+  }
+}

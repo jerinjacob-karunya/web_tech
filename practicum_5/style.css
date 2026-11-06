@@ -16,11 +16,10 @@ hr {
 }
 
 .navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  flex-wrap: wrap;
+  column-gap: 1em;
   padding: 0 6%;
 }
 
@@ -32,6 +31,7 @@ hr {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   list-style: none;
   margin: 0;
@@ -218,4 +218,17 @@ footer {
 
 footer div {
   padding: 0 1.5em;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand action"
+      "menu  menu";
+  }
+
+  .navbar h3 { grid-area: brand; }
+  .nav-action { grid-area: action; }
+  .menu { grid-area: menu; padding-bottom: 0.8em; }
 }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>BookSphere - AI Recommendations</title>
+</head>
+<body>
+
+  <nav class="navbar">
+    <h3>Book<span class="brand">Sphere</span></h3>
+    <ul class="menu">
+      <li><a href="../practicum_4/index.html">Home</a></li>
+      <li><a href="../practicum_2/index.html">My Shelf</a></li>
+      <li><a href="../practicum_3/book_review.html">Write Review</a></li>
+      <li><a href="../practicum_5/index.html">Profile</a></li>
+      <li><a href="../practicum_6/index.html">Discover</a></li>
+      <li><a href="../practicum_7/index.html">Previously Viewed</a></li>
+      <li><a href="../practicum_8/index.html">Suggested Books</a></li>
+      <li><a href="../practicum_9/index.html" class="active">AI Recommendations</a></li>
+    </ul>
+  </nav>
+  <hr>
+
+  <div class="slider">
+    <p class="slide-text" id="slideText">Today's picks: The War of the Worlds &emsp; | &emsp; The Cartographer's Daughter &emsp; | &emsp; Ink and Embers &emsp; | &emsp; Paper Planets</p>
+  </div>
+
+  <div class="mainsec">
+    <p class="maintxt">AI Recommendations</p>
+    <button class="button main-button" id="pauseBtn">Pause the slider</button>
+
+    <div class="cards">
+
+      <div class="card fade-in">
+        <p class="subsec">The legend of the green dragon</p>
+        <p class="subtxt small">By John Doe</p>
+        <button class="button main-button grow-btn">Add to shelf</button>
+      </div>
+
+      <div class="card fade-in">
+        <p class="subsec">Loading spinner</p>
+        <p class="subtxt small">The AI is choosing your next book.</p>
+        <div class="spinner" aria-label="Loading"></div>
+      </div>
+
+      <div class="card fade-in">
+        <p class="subsec">New Recommendations</p>
+        <p class="subtxt small">AI suggestions based on your reading history.</p>
+        <div class="bell">&#128276;<span class="dot"></span></div>
+      </div>
+
+      <div class="card fade-in">
+        <p class="subsec">Reading progress</p>
+        <p class="subtxt small">The War of the Worlds - 70%</p>
+        <div class="track"><div class="fill"></div></div>
+      </div>
+
+    </div>
+  </div>
+  <hr>
+
+  <footer>
+    <div>
+      <p>BookSphere</p>
+    </div>
+    <div>|</div>
+    <div>
+      <p>The Digital library, curated by AI</p>
+    </div>
+    <div>|</div>
+    <div>
+      <p><i>Author: Jerin Jacob J</i></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

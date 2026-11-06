@@ -1,0 +1,248 @@
+body {
+  background-color: bisque;
+  color: #2b2118;
+  font-family: georgia;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  border: 1px solid #ddc4a5;
+  margin: 0;
+}
+
+.mainsec {
+  padding: 2em 6%;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 6%;
+}
+
+.brand {
+  color: brown;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  display: block;
+  color: #2b2118;
+  font-family: calibri;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 14px;
+  border: 1px solid bisque;
+}
+
+.menu a:hover {
+  border: 1px solid #ddc4a5;
+}
+
+.menu a.active {
+  background-color: maroon;
+  color: white;
+}
+
+.button {
+  display: inline-block;
+  background-color: bisque;
+  color: #2b2118;
+  font-family: calibri;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #ddc4a5;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.main-button {
+  background-color: maroon;
+  color: white;
+}
+
+.card {
+  background-color: #f7e8d3;
+  border: 1px solid #ddc4a5;
+  padding: 1.5em;
+  box-sizing: border-box;
+}
+
+.maintxt {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.heading {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin: 0 0 0.2em 0;
+}
+
+.subtxt {
+  font-size: 18px;
+  color: #897864;
+  margin: 0.4em 0;
+}
+
+.small {
+  font-size: 14px;
+}
+
+.subsec {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #2b2118;
+  color: #f7e8d3;
+  text-align: center;
+}
+
+footer div {
+  padding: 0 1.5em;
+}
+
+.slider {
+  background-color: #2b2118;
+  color: #f7e8d3;
+  overflow: hidden;
+  padding: 12px 0;
+}
+
+.slide-text {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  margin: 0;
+  font-size: 18px;
+
+  animation-name: slide;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+}
+
+.slide-text.paused {
+  animation-play-state: paused;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5em;
+  margin-top: 1.5em;
+}
+
+.cards .card {
+  text-align: center;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.grow-btn {
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.grow-btn:hover  { background-color: brown; transform: scale(1.1); }
+.grow-btn:active { transform: scale(0.95); }
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 1em auto 0 auto;
+  border: 5px solid #ddc4a5;
+  border-top-color: maroon;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.bell {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  transform-origin: top center;
+  animation: swing 1.5s ease-in-out infinite;
+}
+
+@keyframes swing {
+  0%, 100% { transform: rotate(0deg); }
+  25%      { transform: rotate(15deg); }
+  75%      { transform: rotate(-15deg); }
+}
+
+.dot {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background-color: maroon;
+  border-radius: 50%;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.5); }
+}
+
+.track {
+  height: 18px;
+  background-color: #ddc4a5;
+  margin-top: 1em;
+}
+
+.fill {
+  height: 100%;
+  width: 70%;
+  background-color: maroon;
+  animation: fillUp 2s ease-out;
+}
+
+@keyframes fillUp {
+  from { width: 0; }
+  to   { width: 70%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
