@@ -36,7 +36,7 @@ const response = await fetch(url);
 console.log("Status:", response.status);
 setDebug("Request: " + url + "  |  Status: " + response.status);
 if (!response.ok) {
-throw new Error("The server replied with status " + response.status);
+	throw new Error("The server replied with status " + response.status);
 }
 const data = await response.json();
 console.log("Data received:", data);
@@ -44,10 +44,10 @@ showResults(data.docs);
 } catch (error) {
 console.error("Search failed:", error);
 setStatus(
-"Could not load books. Check your internet connection and try again. (" +
-error.message +
-")",
-true,
+	"Could not load books. Check your internet connection and try again. (" +
+		error.message +
+		")",
+	true,
 );
 }
 }
@@ -66,17 +66,17 @@ books.forEach(function (book) {
 const card = document.createElement("div");
 card.className = "card book";
 if (book.cover_i) {
-const img = document.createElement("img");
-img.src =
-"https://covers.openlibrary.org/b/id/" + book.cover_i + "-M.jpg";
-img.alt = "Cover of " + book.title;
-img.loading = "lazy";
-card.appendChild(img);
+	const img = document.createElement("img");
+	img.src =
+		"https://covers.openlibrary.org/b/id/" + book.cover_i + "-M.jpg";
+	img.alt = "Cover of " + book.title;
+	img.loading = "lazy";
+	card.appendChild(img);
 } else {
-const noCover = document.createElement("div");
-noCover.className = "no-cover";
-noCover.textContent = "No cover";
-card.appendChild(noCover);
+	const noCover = document.createElement("div");
+	noCover.className = "no-cover";
+	noCover.textContent = "No cover";
+	card.appendChild(noCover);
 }
 const title = document.createElement("p");
 title.className = "subsec";
@@ -85,14 +85,14 @@ const info = document.createElement("p");
 info.className = "subtxt small";
 const author = book.author_name ? book.author_name[0] : "Unknown author";
 const year = book.first_publish_year
-? book.first_publish_year
-: "year unknown";
+	? book.first_publish_year
+	: "year unknown";
 info.textContent = author + " - " + year;
 const addBtn = document.createElement("button");
 addBtn.className = "button main-button";
 addBtn.textContent = "Add to shelf";
 addBtn.onclick = function () {
-addToShelf(book.key, book.title, author);
+	addToShelf(book.key, book.title, author);
 };
 card.appendChild(title);
 card.appendChild(info);
@@ -104,8 +104,8 @@ box.appendChild(card);
 function addToShelf(key, title, author) {
 for (let i = 0; i < shelf.length; i++) {
 if (shelf[i].key === key) {
-setStatus(title + " is already on your shelf.", true);
-return;
+	setStatus(title + " is already on your shelf.", true);
+	return;
 }
 }
 shelf.push({ key: key, title: title, author: author });
@@ -130,13 +130,16 @@ const removeBtn = document.createElement("button");
 removeBtn.className = "button";
 removeBtn.textContent = "Remove";
 removeBtn.onclick = function () {
-removeFromShelf(i);
+	removeFromShelf(i);
 };
 li.appendChild(text);
 li.appendChild(removeBtn);
 list.appendChild(li);
 }
-document.getElementById("shelfCount").textContent = 
-shelf.length === 0 ? "Your shelf is empty. Search a book and add it.": shelf.length + " book(s) on your shelf";}
+document.getElementById("shelfCount").textContent =
+shelf.length === 0
+	? "Your shelf is empty. Search for a book and add it."
+	: shelf.length + " book(s) on your shelf";
+}
 
 showShelf();
