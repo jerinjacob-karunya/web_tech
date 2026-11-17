@@ -1,0 +1,38 @@
+body {
+background-color: #ffffff;
+color: #333333;
+font-family: sans-serif;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme {
+background-color: #121212;
+color: #f4f4f4;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 1em;
+}
+
+.nav-links {
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+}
+
+#theme-toggle {
+border: 1px solid #333333;
+padding: 5px 10px;
+margin-left: auto;
+color: Black;
+text-decoration: none;
+font-weight: bold;
+}
+
+body.dark-theme #theme-toggle {
+border: 1px solid #f4f4f4;
+color: #f4f4f4;
+color: white;
+}

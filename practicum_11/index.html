@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">	<meta name="viewport" content="width=device-width, initial-scale=1.0">	<link rel="stylesheet" href="style.css">	<title>BookSphere - Order Bill</title>	<script src="script.js" defer></script></head>
+<body>
+
+	<nav class="navbar">		<h3>Book<span class="brand">Sphere</span></h3>		<ul class="menu">			<li><a href="../practicum_4/index.html">Home</a></li>			<li><a href="../practicum_2/index.html">My Shelf</a></li>			<li><a href="../practicum_3/book_review.html">Write Review</a></li>			<li><a href="../practicum_5/index.html">Profile</a></li>			<li class="dropdown">				<a href="#">Explore &#9662;</a>				<ul class="dropdown-menu">					<li><a href="../practicum_6/index.html">Discover</a></li>					<li><a href="../practicum_7/index.html">Previously Viewed</a></li>					<li><a href="../practicum_8/index.html">Suggested Books</a></li>					<li><a href="../practicum_9/index.html">AI Recommendations</a></li>				</ul>			</li>			<li class="dropdown">				<a href="#" class="active">Tools &#9662;</a>				<ul class="dropdown-menu">					<li><a href="../practicum_10/index.html">Reading Session</a></li>					<li><a href="../practicum_11/index.html">Order Bill</a></li>					<li><a href="../practicum_12/index.html">Book Search</a></li>					<li><a href="../practicum_13/index.html">Reading Tasks</a></li>					<li><a href="../practicum_14/index.html">Book Quiz</a></li>				</ul>			</li>		</ul>	</nav>	<hr>
+	<div class="mainsec">		<p class="maintxt">Order Bill</p>		<p class="subtxt">Buy books from BookSphere. Fill in the form to see your bill.</p>
+		<div class="billing">
+			<div class="card">				<p class="subsec">Order details</p>				<hr class="dashed">
+				<form id="billForm">					<label for="custName">Your name</label>					<input type="text" id="custName" placeholder="e.g. Jerin Jacob" maxlength="40" autocomplete="off" oninput="clearError('custName')">					<span class="error" id="custNameError"></span>
+					<label for="price">Price of one book (&#8377;)</label>					<input type="text" id="price" placeholder="e.g. 250" inputmode="decimal" maxlength="7" autocomplete="off" oninput="clearError('price')">					<span class="error" id="priceError"></span>
+					<label for="qty">Number of books</label>					<input type="text" id="qty" placeholder="e.g. 3" inputmode="numeric" maxlength="3" autocomplete="off" oninput="clearError('qty')">					<span class="error" id="qtyError"></span>
+					<label for="plan">Membership plan</label>					<select id="plan">						<option value="0">None - no discount</option>						<option value="5">Standard - 5% off</option>						<option value="15">Premium - 15% off</option>					</select>
+					<button type="submit" class="button main-button" id="submitBtn" onclick="calculateBill(event)">Generate bill</button>					<button type="button" class="button" id="clearBtn" onclick="clearForm()">Clear</button>				</form>			</div>
+			<div class="card" id="billCard">				<p class="subsec">Your bill</p>				<hr class="dashed">				<p class="subtxt" id="billHint">Your bill will appear here.</p>
+				<table id="billTable" class="hidden">					<tr><td>Customer</td><td id="outName"></td></tr>					<tr><td id="outItems"></td><td id="outSubtotal"></td></tr>					<tr><td id="outDiscountLabel"></td><td id="outDiscount"></td></tr>					<tr><td>Delivery</td><td id="outDelivery"></td></tr>					<tr class="total"><td>Total to pay</td><td id="outTotal"></td></tr>				</table>				<p class="subtxt small hidden" id="billNote">Delivery is free for orders of &#8377;500 or more.</p>			</div>
+		</div>	</div>	<hr>
+	<footer>		<div>			<p>BookSphere</p>		</div>		<div>|</div>		<div>			<p>The Digital library, curated by AI</p>		</div>		<div>|</div>		<div>			<p><i>Author: Jerin Jacob J</i></p>		</div>	</footer>
+</body>
+</html>
