@@ -1,15 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">	<meta name="viewport" content="width=device-width, initial-scale=1.0">	<link rel="stylesheet" href="style.css">	<title>BookSphere - Previously Viewed</title>	<script src="script.js" defer></script></head>
-<body>
-
-	<nav class="navbar">		<h3>Book<span class="brand">Sphere</span></h3>		<ul class="menu">			<li><a href="../practicum_4/index.html">Home</a></li>			<li><a href="../practicum_2/index.html">My Shelf</a></li>			<li><a href="../practicum_3/book_review.html">Write Review</a></li>			<li><a href="../practicum_5/index.html">Profile</a></li>			<li class="dropdown">				<a href="#" class="active">Explore &#9662;</a>				<ul class="dropdown-menu">					<li><a href="../practicum_6/index.html">Discover</a></li>					<li><a href="../practicum_7/index.html">Previously Viewed</a></li>					<li><a href="../practicum_8/index.html">Suggested Books</a></li>					<li><a href="../practicum_9/index.html">AI Recommendations</a></li>				</ul>			</li>			<li class="dropdown">				<a href="#">Tools &#9662;</a>				<ul class="dropdown-menu">					<li><a href="../practicum_10/index.html">Reading Session</a></li>					<li><a href="../practicum_11/index.html">Order Bill</a></li>					<li><a href="../practicum_12/index.html">Book Search</a></li>					<li><a href="../practicum_13/index.html">Reading Tasks</a></li>					<li><a href="../practicum_14/index.html">Book Quiz</a></li>				</ul>			</li>		</ul>	</nav>	<hr>
-	<div class="mainsec">		<p class="maintxt">Previously Viewed</p>		<p class="subtxt">Click a cover to open it. Use the arrow keys to move and Esc to close.</p>
-		<div class="gallery">			<button class="item" data-caption="The War of the Worlds - Science fiction">				<img loading="lazy" src="images/war-of-the-worlds.svg" alt="Book cover of The War of the Worlds">				<span class="cap">The War of the Worlds</span>			</button>			<button class="item" data-caption="The Silent Archive - Mystery">				<img loading="lazy" src="images/silent-archive.svg" alt="Book cover of The Silent Archive">				<span class="cap">The Silent Archive</span>			</button>			<button class="item" data-caption="A Map of Small Hours - Fiction">				<img loading="lazy" src="images/map-of-small-hours.svg" alt="Book cover of A Map of Small Hours">				<span class="cap">A Map of Small Hours</span>			</button>			<button class="item" data-caption="The Cartographer's Daughter - Mystery">				<img loading="lazy" src="images/cartographers-daughter.svg" alt="Book cover of The Cartographer's Daughter">				<span class="cap">The Cartographer's Daughter</span>			</button>			<button class="item" data-caption="Ink and Embers - Historical fiction">				<img loading="lazy" src="images/ink-and-embers.svg" alt="Book cover of Ink and Embers">				<span class="cap">Ink and Embers</span>			</button>			<button class="item" data-caption="Letters from the Coast - Coastal fiction">				<img loading="lazy" src="images/letters-from-the-coast.svg" alt="Book cover of Letters from the Coast">				<span class="cap">Letters from the Coast</span>			</button>			<button class="item" data-caption="The Last Lighthouse - Coastal novel">				<img loading="lazy" src="images/last-lighthouse.svg" alt="Book cover of The Last Lighthouse">				<span class="cap">The Last Lighthouse</span>			</button>			<button class="item" data-caption="Paper Planets - Science fiction">				<img loading="lazy" src="images/paper-planets.svg" alt="Book cover of Paper Planets">				<span class="cap">Paper Planets</span>			</button>		</div>	</div>	<hr>
-	<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Cover viewer">		<button class="o-btn close-btn" id="closeBtn" aria-label="Close">&times;</button>		<button class="o-btn prev" id="prevBtn" aria-label="Previous cover">&#10094;</button>
-		<figure class="viewer">			<img id="bigImage" src="" alt="">			<figcaption id="caption"></figcaption>		</figure>
-		<button class="o-btn next" id="nextBtn" aria-label="Next cover">&#10095;</button>	</div>
-	<footer>		<div>			<p>BookSphere</p>		</div>		<div>|</div>		<div>			<p>The Digital library, curated by AI</p>		</div>		<div>|</div>		<div>			<p><i>Author: Jerin Jacob J</i></p>		</div>	</footer>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>BookSphere - Previously Viewed</title>
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<nav class="navbar">
+			<h3>Book<span class="brand">Sphere</span></h3>
+			<ul class="menu">
+				<li><a href="../practicum_4/index.html">Home</a></li>
+				<li><a href="../practicum_2/index.html">My Shelf</a></li>
+				<li><a href="../practicum_3/book_review.html">Write Review</a></li>
+				<li><a href="../practicum_5/index.html">Profile</a></li>
+				<li class="dropdown">
+					<a href="#" class="active">Explore &#9662;</a>
+					<ul class="dropdown-menu">
+						<li><a href="../practicum_6/index.html">Discover</a></li>
+						<li><a href="../practicum_7/index.html">Previously Viewed</a></li>
+						<li><a href="../practicum_8/index.html">Suggested Books</a></li>
+						<li><a href="../practicum_9/index.html">AI Recommendations</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#">Tools &#9662;</a>
+					<ul class="dropdown-menu">
+						<li><a href="../practicum_10/index.html">Reading Session</a></li>
+						<li><a href="../practicum_11/index.html">Order Bill</a></li>
+						<li><a href="../practicum_12/index.html">Book Search</a></li>
+						<li><a href="../practicum_13/index.html">Reading Tasks</a></li>
+						<li><a href="../practicum_14/index.html">Book Quiz</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<hr />
+		<div class="mainsec">
+			<p class="maintxt">Previously Viewed</p>
+			<p class="subtxt">
+				Click a cover to open it. Use the arrow keys to move and Esc to close.
+			</p>
+			<div class="gallery">
+				<button
+					class="item"
+					data-caption="The War of the Worlds - Science fiction"
+				>
+					<img
+						loading="lazy"
+						src="images/war-of-the-worlds.svg"
+						alt="Book cover of The War of the Worlds"
+					/>
+					<span class="cap">The War of the Worlds</span>
+				</button>
+				<button class="item" data-caption="The Silent Archive - Mystery">
+					<img
+						loading="lazy"
+						src="images/silent-archive.svg"
+						alt="Book cover of The Silent Archive"
+					/>
+					<span class="cap">The Silent Archive</span>
+				</button>
+				<button class="item" data-caption="A Map of Small Hours - Fiction">
+					<img
+						loading="lazy"
+						src="images/map-of-small-hours.svg"
+						alt="Book cover of A Map of Small Hours"
+					/>
+					<span class="cap">A Map of Small Hours</span>
+				</button>
+				<button
+					class="item"
+					data-caption="The Cartographer's Daughter - Mystery"
+				>
+					<img
+						loading="lazy"
+						src="images/cartographers-daughter.svg"
+						alt="Book cover of The Cartographer's Daughter"
+					/>
+					<span class="cap">The Cartographer's Daughter</span>
+				</button>
+				<button class="item" data-caption="Ink and Embers - Historical fiction">
+					<img
+						loading="lazy"
+						src="images/ink-and-embers.svg"
+						alt="Book cover of Ink and Embers"
+					/>
+					<span class="cap">Ink and Embers</span>
+				</button>
+				<button
+					class="item"
+					data-caption="Letters from the Coast - Coastal fiction"
+				>
+					<img
+						loading="lazy"
+						src="images/letters-from-the-coast.svg"
+						alt="Book cover of Letters from the Coast"
+					/>
+					<span class="cap">Letters from the Coast</span>
+				</button>
+				<button class="item" data-caption="The Last Lighthouse - Coastal novel">
+					<img
+						loading="lazy"
+						src="images/last-lighthouse.svg"
+						alt="Book cover of The Last Lighthouse"
+					/>
+					<span class="cap">The Last Lighthouse</span>
+				</button>
+				<button class="item" data-caption="Paper Planets - Science fiction">
+					<img
+						loading="lazy"
+						src="images/paper-planets.svg"
+						alt="Book cover of Paper Planets"
+					/>
+					<span class="cap">Paper Planets</span>
+				</button>
+			</div>
+		</div>
+		<hr />
+		<div
+			class="overlay"
+			id="overlay"
+			role="dialog"
+			aria-modal="true"
+			aria-label="Cover viewer"
+		>
+			<button class="o-btn close-btn" id="closeBtn" aria-label="Close">
+				&times;
+			</button>
+			<button class="o-btn prev" id="prevBtn" aria-label="Previous cover">
+				&#10094;
+			</button>
+			<figure class="viewer">
+				<img id="bigImage" src="" alt="" />
+				<figcaption id="caption"></figcaption>
+			</figure>
+			<button class="o-btn next" id="nextBtn" aria-label="Next cover">
+				&#10095;
+			</button>
+		</div>
+		<footer>
+			<div><p>BookSphere</p></div>
+			<div>|</div>
+			<div><p>The Digital library, curated by AI</p></div>
+			<div>|</div>
+			<div>
+				<p><i>Author: Jerin Jacob J</i></p>
+			</div>
+		</footer>
+	</body>
 </html>

@@ -1,12 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">	<meta name="viewport" content="width=device-width, initial-scale=1.0">	<link rel="stylesheet" href="style.css">	<title>BookSphere - AI Recommendations</title></head>
-<body>
-
-	<nav class="navbar">		<h3>Book<span class="brand">Sphere</span></h3>		<ul class="menu">			<li><a href="../practicum_4/index.html">Home</a></li>			<li><a href="../practicum_2/index.html">My Shelf</a></li>			<li><a href="../practicum_3/book_review.html">Write Review</a></li>			<li><a href="../practicum_5/index.html">Profile</a></li>			<li class="dropdown">				<a href="#" class="active">Explore &#9662;</a>				<ul class="dropdown-menu">					<li><a href="../practicum_6/index.html">Discover</a></li>					<li><a href="../practicum_7/index.html">Previously Viewed</a></li>					<li><a href="../practicum_8/index.html">Suggested Books</a></li>					<li><a href="../practicum_9/index.html">AI Recommendations</a></li>				</ul>			</li>			<li class="dropdown">				<a href="#">Tools &#9662;</a>				<ul class="dropdown-menu">					<li><a href="../practicum_13/index.html">Reading Tasks</a></li>					<li><a href="../practicum_14/index.html">Book Quiz</a></li>				</ul>			</li>		</ul>	</nav>	<hr>
-	<main class="mainsec loading-page">		<h1 class="maintxt">AI Recommendations</h1>		<p class="subtxt intro-copy">Your next read is being matched to your tastes. While you wait, browse a few stories from the BookSphere collection.</p>		<div class="card loading-card">			<div class="spinner" role="status" aria-label="Loading recommendations"></div>			<div class="book-ticker" aria-label="Books being matched">				<span class="book-ticker-track">The War of the Worlds &bull; The Silent Archive &bull; A Map of Small Hours &bull; The Cartographer's Daughter &bull; Ink and Embers &bull; Letters from the Coast &bull; The Last Lighthouse &bull; Paper Planets</span>			</div>			<p class="loading-message">AI is finding your next book.</p>			<p class="subtxt small">A good read is on its way.</p>		</div>
-		<section class="browse-section" aria-labelledby="browseHeading">			<h2 class="heading" id="browseHeading">More to explore</h2>			<p class="subtxt small">A few titles from the BookSphere shelf.</p>			<div class="book-preview-grid">				<article class="card book-preview">					<img src="../practicum_8/images/war-of-the-worlds.svg" alt="Cover of The War of the Worlds">					<h3 class="subsec">The War of the Worlds</h3>					<p class="subtxt small">Science fiction</p>				</article>				<article class="card book-preview">					<img src="../practicum_8/images/silent-archive.svg" alt="Cover of The Silent Archive">					<h3 class="subsec">The Silent Archive</h3>					<p class="subtxt small">Mystery</p>				</article>				<article class="card book-preview">					<img src="../practicum_8/images/ink-and-embers.svg" alt="Cover of Ink and Embers">					<h3 class="subsec">Ink and Embers</h3>					<p class="subtxt small">Historical fiction</p>				</article>			</div>		</section>	</main>	<hr>
-	<footer>		<div>			<p>BookSphere</p>		</div>		<div>|</div>		<div>			<p>The Digital library, curated by AI</p>		</div>		<div>|</div>		<div>			<p><i>Author: Jerin Jacob J</i></p>		</div>	</footer>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>BookSphere - AI Recommendations</title>
+	</head>
+	<body>
+		<nav class="navbar">
+			<h3>Book<span class="brand">Sphere</span></h3>
+			<ul class="menu">
+				<li><a href="../practicum_4/index.html">Home</a></li>
+				<li><a href="../practicum_2/index.html">My Shelf</a></li>
+				<li><a href="../practicum_3/book_review.html">Write Review</a></li>
+				<li><a href="../practicum_5/index.html">Profile</a></li>
+				<li class="dropdown">
+					<a href="#" class="active">Explore &#9662;</a>
+					<ul class="dropdown-menu">
+						<li><a href="../practicum_6/index.html">Discover</a></li>
+						<li><a href="../practicum_7/index.html">Previously Viewed</a></li>
+						<li><a href="../practicum_8/index.html">Suggested Books</a></li>
+						<li><a href="../practicum_9/index.html">AI Recommendations</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#">Tools &#9662;</a>
+					<ul class="dropdown-menu">
+						<li><a href="../practicum_13/index.html">Reading Tasks</a></li>
+						<li><a href="../practicum_14/index.html">Book Quiz</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<hr />
+		<main class="mainsec loading-page">
+			<h1 class="maintxt">AI Recommendations</h1>
+			<p class="subtxt intro-copy">
+				Your next read is being matched to your tastes. While you wait, browse a
+				few stories from the BookSphere collection.
+			</p>
+			<div class="card loading-card">
+				<div
+					class="spinner"
+					role="status"
+					aria-label="Loading recommendations"
+				></div>
+				<div class="book-ticker" aria-label="Books being matched">
+					<span class="book-ticker-track"
+						>The War of the Worlds &bull; The Silent Archive &bull; A Map of
+						Small Hours &bull; The Cartographer's Daughter &bull; Ink and Embers
+						&bull; Letters from the Coast &bull; The Last Lighthouse &bull;
+						Paper Planets</span
+					>
+				</div>
+				<p class="loading-message">AI is finding your next book.</p>
+				<p class="subtxt small">A good read is on its way.</p>
+			</div>
+			<section class="browse-section" aria-labelledby="browseHeading">
+				<h2 class="heading" id="browseHeading">More to explore</h2>
+				<p class="subtxt small">A few titles from the BookSphere shelf.</p>
+				<div class="book-preview-grid">
+					<article class="card book-preview">
+						<img
+							src="../practicum_8/images/war-of-the-worlds.svg"
+							alt="Cover of The War of the Worlds"
+						/>
+						<h3 class="subsec">The War of the Worlds</h3>
+						<p class="subtxt small">Science fiction</p>
+					</article>
+					<article class="card book-preview">
+						<img
+							src="../practicum_8/images/silent-archive.svg"
+							alt="Cover of The Silent Archive"
+						/>
+						<h3 class="subsec">The Silent Archive</h3>
+						<p class="subtxt small">Mystery</p>
+					</article>
+					<article class="card book-preview">
+						<img
+							src="../practicum_8/images/ink-and-embers.svg"
+							alt="Cover of Ink and Embers"
+						/>
+						<h3 class="subsec">Ink and Embers</h3>
+						<p class="subtxt small">Historical fiction</p>
+					</article>
+				</div>
+			</section>
+		</main>
+		<hr />
+		<footer>
+			<div><p>BookSphere</p></div>
+			<div>|</div>
+			<div><p>The Digital library, curated by AI</p></div>
+			<div>|</div>
+			<div>
+				<p><i>Author: Jerin Jacob J</i></p>
+			</div>
+		</footer>
+	</body>
 </html>

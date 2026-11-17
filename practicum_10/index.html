@@ -1,17 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">	<meta name="viewport" content="width=device-width, initial-scale=1.0">	<link rel="stylesheet" href="style.css">	<title>BookSphere - Reading Session</title>	<script src="script.js" defer></script></head>
-<body>
-
-	<nav class="navbar">		<h3>Book<span class="brand">Sphere</span></h3>		<ul class="menu">			<li><a href="../practicum_4/index.html">Home</a></li>			<li><a href="../practicum_2/index.html">My Shelf</a></li>			<li><a href="../practicum_3/book_review.html">Write Review</a></li>			<li><a href="../practicum_5/index.html">Profile</a></li>			<li class="dropdown">				<a href="#">Explore &#9662;</a>				<ul class="dropdown-menu">					<li><a href="../practicum_6/index.html">Discover</a></li>					<li><a href="../practicum_7/index.html">Previously Viewed</a></li>					<li><a href="../practicum_8/index.html">Suggested Books</a></li>					<li><a href="../practicum_9/index.html">AI Recommendations</a></li>				</ul>			</li>			<li class="dropdown">				<a href="#" class="active">Tools &#9662;</a>				<ul class="dropdown-menu">					<li><a href="../practicum_10/index.html">Reading Session</a></li>					<li><a href="../practicum_11/index.html">Order Bill</a></li>					<li><a href="../practicum_12/index.html">Book Search</a></li>					<li><a href="../practicum_13/index.html">Reading Tasks</a></li>					<li><a href="../practicum_14/index.html">Book Quiz</a></li>				</ul>			</li>		</ul>	</nav>	<hr>
-	<div class="mainsec">		<p class="maintxt">Reading Session</p>		<p class="subtxt">Time your reading, set a break reminder and preview a book.</p>
-		<div class="tools">
-			<div class="card" id="timerCard">				<p class="subsec">Reading timer</p>				<hr class="dashed">				<p class="clock" id="clock">00:00</p>				<p class="subtxt small" id="timerStatus">Press Start when you begin reading.</p>				<button class="button main-button" id="startBtn" onclick="startTimer()">Start</button>				<button class="button" id="stopBtn" onclick="stopTimer()">Stop</button>				<button class="button" id="resetBtn" onclick="resetTimer()">Reset</button>			</div>
-			<div class="card" id="reminderCard">				<p class="subsec">Break reminder</p>				<hr class="dashed">				<label for="delaySelect" class="subtxt small">Remind me to rest my eyes in:</label>				<select id="delaySelect">					<option value="5">5 seconds</option>					<option value="10">10 seconds</option>					<option value="20">20 seconds</option>				</select>				<br>				<button class="button main-button" id="remindBtn" onclick="setReminder()">Set reminder</button>				<button class="button" id="cancelBtn" onclick="cancelReminder()">Cancel</button>				<p class="reminder" id="reminderMsg">No reminder set.</p>			</div>
-			<div class="card" id="previewCard">				<p class="subsec">Book preview</p>				<hr class="dashed">				<label for="bookSelect" class="subtxt small">Choose a book:</label>				<select id="bookSelect">					<option value="war">The War of the Worlds</option>					<option value="time">The Time Machine</option>					<option value="map">The Cartographer's Daughter</option>					<option value="ink">Ink and Embers</option>				</select>				<p class="subsec" id="bookTitle"></p>				<p class="subtxt small" id="bookMeta"></p>
-				<label for="sizeRange" class="subtxt small">Text size:</label>				<input type="range" id="sizeRange" min="14" max="28" value="18">				<p id="bookText"></p>			</div>
-		</div>	</div>	<hr>
-	<footer>		<div>			<p>BookSphere</p>		</div>		<div>|</div>		<div>			<p>The Digital library, curated by AI</p>		</div>		<div>|</div>		<div>			<p><i>Author: Jerin Jacob J</i></p>		</div>	</footer>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>BookSphere - Reading Session</title>
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<nav class="navbar">
+			<h3>Book<span class="brand">Sphere</span></h3>
+			<ul class="menu">
+				<li><a href="../practicum_4/index.html">Home</a></li>
+				<li><a href="../practicum_2/index.html">My Shelf</a></li>
+				<li><a href="../practicum_3/book_review.html">Write Review</a></li>
+				<li><a href="../practicum_5/index.html">Profile</a></li>
+				<li class="dropdown">
+					<a href="#">Explore &#9662;</a>
+					<ul class="dropdown-menu">
+						<li><a href="../practicum_6/index.html">Discover</a></li>
+						<li><a href="../practicum_7/index.html">Previously Viewed</a></li>
+						<li><a href="../practicum_8/index.html">Suggested Books</a></li>
+						<li><a href="../practicum_9/index.html">AI Recommendations</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="active">Tools &#9662;</a>
+					<ul class="dropdown-menu">
+						<li><a href="../practicum_10/index.html">Reading Session</a></li>
+						<li><a href="../practicum_11/index.html">Order Bill</a></li>
+						<li><a href="../practicum_12/index.html">Book Search</a></li>
+						<li><a href="../practicum_13/index.html">Reading Tasks</a></li>
+						<li><a href="../practicum_14/index.html">Book Quiz</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<hr />
+		<div class="mainsec">
+			<p class="maintxt">Reading Session</p>
+			<p class="subtxt">
+				Time your reading, set a break reminder and preview a book.
+			</p>
+			<div class="tools">
+				<div class="card" id="timerCard">
+					<p class="subsec">Reading timer</p>
+					<hr class="dashed" />
+					<p class="clock" id="clock">00:00</p>
+					<p class="subtxt small" id="timerStatus">
+						Press Start when you begin reading.
+					</p>
+					<button
+						class="button main-button"
+						id="startBtn"
+						onclick="startTimer()"
+					>
+						Start
+					</button>
+					<button class="button" id="stopBtn" onclick="stopTimer()">
+						Stop
+					</button>
+					<button class="button" id="resetBtn" onclick="resetTimer()">
+						Reset
+					</button>
+				</div>
+				<div class="card" id="reminderCard">
+					<p class="subsec">Break reminder</p>
+					<hr class="dashed" />
+					<label for="delaySelect" class="subtxt small"
+						>Remind me to rest my eyes in:</label
+					>
+					<select id="delaySelect">
+						<option value="5">5 seconds</option>
+						<option value="10">10 seconds</option>
+						<option value="20">20 seconds</option>
+					</select>
+					<br />
+					<button
+						class="button main-button"
+						id="remindBtn"
+						onclick="setReminder()"
+					>
+						Set reminder
+					</button>
+					<button class="button" id="cancelBtn" onclick="cancelReminder()">
+						Cancel
+					</button>
+					<p class="reminder" id="reminderMsg">No reminder set.</p>
+				</div>
+				<div class="card" id="previewCard">
+					<p class="subsec">Book preview</p>
+					<hr class="dashed" />
+					<label for="bookSelect" class="subtxt small">Choose a book:</label>
+					<select id="bookSelect">
+						<option value="war">The War of the Worlds</option>
+						<option value="time">The Time Machine</option>
+						<option value="map">The Cartographer's Daughter</option>
+						<option value="ink">Ink and Embers</option>
+					</select>
+					<p class="subsec" id="bookTitle"></p>
+					<p class="subtxt small" id="bookMeta"></p>
+					<label for="sizeRange" class="subtxt small">Text size:</label>
+					<input type="range" id="sizeRange" min="14" max="28" value="18" />
+					<p id="bookText"></p>
+				</div>
+			</div>
+		</div>
+		<hr />
+		<footer>
+			<div><p>BookSphere</p></div>
+			<div>|</div>
+			<div><p>The Digital library, curated by AI</p></div>
+			<div>|</div>
+			<div>
+				<p><i>Author: Jerin Jacob J</i></p>
+			</div>
+		</footer>
+	</body>
 </html>

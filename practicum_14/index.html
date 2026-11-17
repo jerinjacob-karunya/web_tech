@@ -1,12 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">	<meta name="viewport" content="width=device-width, initial-scale=1.0">	<link rel="stylesheet" href="style.css">	<title>BookSphere - Book Quiz</title>	<script src="script.js" defer></script></head>
-<body>
-
-	<nav class="navbar">		<h3>Book<span class="brand">Sphere</span></h3>		<ul class="menu">			<li><a href="../practicum_4/index.html">Home</a></li>			<li><a href="../practicum_2/index.html">My Shelf</a></li>			<li><a href="../practicum_3/book_review.html">Write Review</a></li>			<li><a href="../practicum_5/index.html">Profile</a></li>			<li class="dropdown">				<a href="#">Explore &#9662;</a>				<ul class="dropdown-menu">					<li><a href="../practicum_6/index.html">Discover</a></li>					<li><a href="../practicum_7/index.html">Previously Viewed</a></li>					<li><a href="../practicum_8/index.html">Suggested Books</a></li>					<li><a href="../practicum_9/index.html">AI Recommendations</a></li>				</ul>			</li>			<li class="dropdown">				<a href="#" class="active">Tools &#9662;</a>				<ul class="dropdown-menu">					<li><a href="../practicum_13/index.html">Reading Tasks</a></li>					<li><a href="../practicum_14/index.html">Book Quiz</a></li>				</ul>			</li>		</ul>	</nav>	<hr>
-	<div class="mainsec">		<p class="maintxt">Book Quiz</p>		<p class="subtxt">Five quick questions. Pick an answer, then press Next.</p>
-		<div class="card quiz">			<p class="subtxt small" id="progress"></p>			<p class="subsec" id="question"></p>			<div id="options"></div>			<p id="feedback"></p>			<button class="button main-button" id="nextBtn" onclick="nextQuestion()">Next</button>			<button class="button main-button" id="restartBtn" onclick="restartQuiz()">Play again</button>		</div>	</div>	<hr>
-	<footer>		<div>			<p>BookSphere</p>		</div>		<div>|</div>		<div>			<p>The Digital library, curated by AI</p>		</div>		<div>|</div>		<div>			<p><i>Author: Jerin Jacob J</i></p>		</div>	</footer>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>BookSphere - Book Quiz</title>
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<nav class="navbar">
+			<h3>Book<span class="brand">Sphere</span></h3>
+			<ul class="menu">
+				<li><a href="../practicum_4/index.html">Home</a></li>
+				<li><a href="../practicum_2/index.html">My Shelf</a></li>
+				<li><a href="../practicum_3/book_review.html">Write Review</a></li>
+				<li><a href="../practicum_5/index.html">Profile</a></li>
+				<li class="dropdown">
+					<a href="#">Explore &#9662;</a>
+					<ul class="dropdown-menu">
+						<li><a href="../practicum_6/index.html">Discover</a></li>
+						<li><a href="../practicum_7/index.html">Previously Viewed</a></li>
+						<li><a href="../practicum_8/index.html">Suggested Books</a></li>
+						<li><a href="../practicum_9/index.html">AI Recommendations</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="active">Tools &#9662;</a>
+					<ul class="dropdown-menu">
+						<li><a href="../practicum_13/index.html">Reading Tasks</a></li>
+						<li><a href="../practicum_14/index.html">Book Quiz</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<hr />
+		<div class="mainsec">
+			<p class="maintxt">Book Quiz</p>
+			<p class="subtxt">
+				Five quick questions. Pick an answer, then press Next.
+			</p>
+			<div class="card quiz">
+				<p class="subtxt small" id="progress"></p>
+				<p class="subsec" id="question"></p>
+				<div id="options"></div>
+				<p id="feedback"></p>
+				<button
+					class="button main-button"
+					id="nextBtn"
+					onclick="nextQuestion()"
+				>
+					Next
+				</button>
+				<button
+					class="button main-button"
+					id="restartBtn"
+					onclick="restartQuiz()"
+				>
+					Play again
+				</button>
+			</div>
+		</div>
+		<hr />
+		<footer>
+			<div><p>BookSphere</p></div>
+			<div>|</div>
+			<div><p>The Digital library, curated by AI</p></div>
+			<div>|</div>
+			<div>
+				<p><i>Author: Jerin Jacob J</i></p>
+			</div>
+		</footer>
+	</body>
 </html>
